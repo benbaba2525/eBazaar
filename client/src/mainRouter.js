@@ -17,7 +17,6 @@ import NewProduct from './product/NewProduct'
 import EditProduct from './product/EditProduct'
 import Product from './product/Product'
 
-
 class MainRouter extends Component {
   render() {
     return (<div>

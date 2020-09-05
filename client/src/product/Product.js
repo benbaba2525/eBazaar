@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import Card, { CardHeader, CardMedia } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
+import Icon from 'material-ui/Icon'
 import Grid from 'material-ui/Grid'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import { read, listRelated } from './api-product.js'
+import { Link } from 'react-router-dom'
+import Suggestions from './../product/Suggestions'
 
 
 const styles = theme => ({
@@ -110,6 +113,11 @@ class Product extends Component {
                 <Typography component="p" type="subheading" className={classes.subheading}>
                   {this.state.product.description}<br />
                   <span className={classes.price}>$ {this.state.product.price}</span>
+                  <Link style={{ textDecoration: 'none' }} to={'/shops/' + this.state.product.shop._id} className={classes.link}>
+                    <span>
+                      <Icon className={classes.icon}>shopping_basket</Icon> {this.state.product.shop.name}
+                    </span>
+                  </Link>
                 </Typography>
 
               </div>
