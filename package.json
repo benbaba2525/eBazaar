@@ -1,9 +1,10 @@
 {
-  "name": "eBazaar",
+  "name": "mern-marketplace",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "keywords": [],
+  "author": "Kamil Smas",
   "license": "ISC",
 
   "scripts": {

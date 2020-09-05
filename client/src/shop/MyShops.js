@@ -93,11 +93,11 @@ class MyShops extends Component {
                   <ListItemText primary={shop.name} secondary={shop.description} />
                   {auth.isAuthenticated().user && auth.isAuthenticated().user._id === shop.owner._id &&
                     (<ListItemSecondaryAction>
-                      <Link style={{ textDecoration: 'none' }} to={"/seller/orders/" + shop.name + '/' + shop._id}>
+                      {/* <Link style={{ textDecoration: 'none' }} to={"/seller/orders/" + shop.name + '/' + shop._id}>
                         <Button aria-label="Orders" color="primary">
                           View Orders
                       </Button>
-                      </Link>
+                      </Link> */}
                       <Link to={"/seller/shop/edit/" + shop._id}>
                         <IconButton aria-label="Edit" color="primary">
                           <Edit />

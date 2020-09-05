@@ -110,7 +110,7 @@ class Profile extends Component {
               new Date(this.state.user.created)).toDateString()} />
           </ListItem>
         </List>
-        <MyOrders />
+      
       </Paper>
     )
   }

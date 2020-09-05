@@ -16,7 +16,6 @@ import EditShop from './shop/EditShop'
 import NewProduct from './product/NewProduct'
 import EditProduct from './product/EditProduct'
 import Product from './product/Product'
-import StripeConnect from './user/StripeConnect'
 import ShopOrders from './order/ShopOrders'
 import Order from './order/Order'
 
@@ -46,7 +45,6 @@ class MainRouter extends Component {
         <PrivateRoute path="/seller/:shopId/products/new" component={NewProduct} />
         <PrivateRoute path="/seller/:shopId/:productId/edit" component={EditProduct} />
 
-        <Route path="/seller/stripe/connect" component={StripeConnect} />
       </Switch>
     </div>)
   }
