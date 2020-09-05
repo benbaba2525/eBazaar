@@ -11,7 +11,7 @@ const userRoutes = require('./routes/api/user.routes')
 const authRoutes = require('./routes/api/auth.routes')
 const shopRoutes = require('./routes/api/shop.routes')
 const productRoutes = require('./routes/api/product.routes')
-const orderRoutes = require('./routes/api/order.routes')
+
 
 // ... other app.use middleware
 app.use(express.static(path.join(__dirname, "client", "build")))
@@ -28,7 +28,7 @@ app.use('/', userRoutes)
 app.use('/', authRoutes)
 app.use('/', shopRoutes)
 app.use('/', productRoutes)
-app.use('/', orderRoutes)
+
 
 
 

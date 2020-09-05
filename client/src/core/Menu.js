@@ -40,7 +40,7 @@ const Menu = withRouter(({ history }) => (
       <div style={{ 'position': 'absolute', 'right': '10px' }}><span style={{ 'float': 'right' }}>
         {
           !auth.isAuthenticated() && (<span>
-            <Link style={{ textDecoration: 'none' }} to="/signup">
+            <Link style={{ textDecoration: 'none'}} to="/signup">
               <Button style={isActive(history, "/signup")}>Sign up
             </Button>
             </Link>
