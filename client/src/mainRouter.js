@@ -35,9 +35,7 @@ class MainRouter extends Component {
         <Route path="/shops/all" component={Shops} />
         <Route path="/shops/:shopId" component={Shop} />
 
-        {/* <Route path="/order/:orderId" component={Order} />
-        <PrivateRoute path="/seller/orders/:shop/:shopId" component={ShopOrders} /> */}
-
+        
         <PrivateRoute path="/seller/shops" component={MyShops} />
         <PrivateRoute path="/seller/shop/new" component={NewShop} />
         <PrivateRoute path="/seller/shop/edit/:shopId" component={EditShop} />

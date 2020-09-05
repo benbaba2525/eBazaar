@@ -16,7 +16,7 @@ const styles = theme => ({
     margin: 'auto',
     textAlign: 'center',
     marginTop: theme.spacing.unit * 5,
-    paddingBottom: theme.spacing.unit * 2
+    paddingBottom: theme.spacing.unit * 5
   },
   error: {
     verticalAlign: 'middle'

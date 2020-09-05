@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Paper from 'material-ui/Paper'
-import Button from 'material-ui/Button'
+//import Button from 'material-ui/Button'
 import Typography from 'material-ui/Typography'
 import IconButton from 'material-ui/IconButton'
 import { Link } from 'react-router-dom'
 import ViewIcon from 'material-ui-icons/Visibility'
-import Icon from 'material-ui/Icon'
+//import Icon from 'material-ui/Icon'
 import Divider from 'material-ui/Divider'
 import Card, { CardContent, CardMedia } from 'material-ui/Card'
 
@@ -94,11 +94,11 @@ class Suggestions extends Component {
               <div className={classes.details}>
                 <CardContent className={classes.content}>
                   <Link style={{ textDecoration: 'none' }} to={'/product/' + item._id}><Typography type="title" component="h3" className={classes.productTitle} color="primary">{item.name}</Typography></Link>
-                  <Link style={{ textDecoration: 'none' }} to={'/shops/' + item.shop._id}>
+                  {/* <Link style={{ textDecoration: 'none' }} to={'/shops/' + item.shop._id}>
                     <Typography type="subheading" className={classes.subheading}>
                       <Icon className={classes.icon}>shopping_basket</Icon> {item.shop.name}
                     </Typography>
-                  </Link>
+                  </Link> */}
                   <Typography component="p" className={classes.date}>
                     Added on {(new Date(item.created)).toDateString()}
                   </Typography>
