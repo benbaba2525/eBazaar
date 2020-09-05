@@ -1,8 +1,10 @@
 import React from 'react'
 import MainRouter from './mainRouter'
 import { BrowserRouter } from 'react-router-dom'
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
+import { MuiThemeProvider, createMuiTheme} from 'material-ui/styles'
 import { blueGrey, lightGreen } from 'material-ui/colors'
+
+
 
 // Create a theme instance.
 const theme = createMuiTheme({
@@ -22,6 +24,7 @@ const theme = createMuiTheme({
     openTitle: blueGrey['400'],
     protectedTitle: lightGreen['400'],
     type: 'light'
+
   }
 })
 

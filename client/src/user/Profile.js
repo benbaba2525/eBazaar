@@ -85,16 +85,6 @@ class Profile extends Component {
             <ListItemText primary={this.state.user.name} secondary={this.state.user.email} /> {
               auth.isAuthenticated().user && auth.isAuthenticated().user._id === this.state.user._id &&
               (<ListItemSecondaryAction>
-                {/* {this.state.user.seller &&
-                  (this.state.user.stripe_seller
-                    ? (<Button variant="raised" disabled className={classes.stripe_connected}>
-                      Stripe connected
-                      </Button>)
-                    : (<a href={"https://connect.stripe.com/oauth/authorize?response_type=code&client_id="} className={classes.stripe_connect}>
-                      <img src={stripeButton} alt="" />
-                    </a>)
-                  )
-                } */}
                 <Link to={"/user/edit/" + this.state.user._id}>
                   <IconButton aria-label="Edit" color="primary">
                     <Edit />

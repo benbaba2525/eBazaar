@@ -24,7 +24,7 @@ const isPartActive = (history, path) => {
 const Menu = withRouter(({ history }) => (
   <AppBar position="static">
     <Toolbar>
-      <Typography type="title" color="inherit" variant="h3">
+      <Typography type="title" color="inherit" variant="h1" component="h1">
        eBazaar
       </Typography>
       <div>
