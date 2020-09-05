@@ -63,7 +63,7 @@ const update = (req, res, next) => {
       })
     }
     let product = req.product
-    product = _.extend(product, fields)
+    //product = _.extend(product, fields)***Error***
     product.updated = Date.now()
     if (files.image) {
       product.image.data = fs.readFileSync(files.image.path)
