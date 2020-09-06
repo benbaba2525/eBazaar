@@ -25,8 +25,6 @@ const theme = createMuiTheme({
     openTitle: blueGrey['400'],
     protectedTitle: lightGreen['400'],
     type: 'light',
-    fontFamily: "Lobster",
-    fontStyle: "oblique"
   },
   
 })

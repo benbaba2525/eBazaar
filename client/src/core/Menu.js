@@ -30,7 +30,7 @@ const isPartActive = (history, path) => {
     return { color: '#ffffff', fontSize:"1.2rem" }
 }
 const Menu = withRouter(({ history }) => (
-  <AppBar position="fixed">
+  <AppBar position="static">
     <Toolbar>
       <div>
         <Link style={{ textDecoration: 'none' }} to="/">
