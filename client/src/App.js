@@ -9,6 +9,7 @@ import { blueGrey, lightGreen } from 'material-ui/colors'
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     primary: {
       light: '#8eacbb',
       main: '#00acff',
@@ -27,7 +28,6 @@ const theme = createMuiTheme({
   },
   
 })
-
 
 const App = () => (
   <BrowserRouter>

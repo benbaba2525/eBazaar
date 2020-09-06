@@ -12,6 +12,7 @@ const logoStyle = ({
     fontSize: "3.5rem",
     fontStyle: "oblique",
     color: "black",
+    margin: "auto"
 });
 
 
@@ -28,11 +29,9 @@ const isPartActive = (history, path) => {
     return { color: '#ffffff', fontSize:"1.2rem" }
 }
 const Menu = withRouter(({ history }) => (
-  <AppBar position="static">
+  <AppBar position="static" style={{height:"5rem"}}>
     <Toolbar>
-      <Typography style={logoStyle} type="title"  variant="h1" component="h1">
-       eBazaar
-      </Typography>
+     
       <div>
         <Link style={{ textDecoration: 'none' }} to="/">
           <IconButton aria-label="Home" style={isActive(history, "/")}>
@@ -43,6 +42,10 @@ const Menu = withRouter(({ history }) => (
           <Button style={isActive(history, "/shops/all")}>All Shops</Button>
         </Link>
       </div>
+
+      <Typography style={logoStyle} type="title"  variant="h1" component="h1">
+       eBazaar
+      </Typography>
       <div style={{ 'position': 'absolute', 'right': '10px' }}><span style={{ 'float': 'right' }}>
         {
           !auth.isAuthenticated() && (<span>
