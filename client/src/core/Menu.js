@@ -9,13 +9,14 @@ import auth from './../auth/auth-helper'
 import { Link, withRouter } from 'react-router-dom'
 
 const logoStyle = ({
-    fontSize: "3.5rem",
+    fontSize: "3.8rem",
+    fontFamily: "Lobster",
     fontStyle: "oblique",
     color: "black",
     margin: "auto"
 });
 
-
+//oblique
 const isActive = (history, path) => {
   if (history.location.pathname === path)
     return { color: '#bef67a', fontSize:"1.2rem"}
@@ -29,9 +30,8 @@ const isPartActive = (history, path) => {
     return { color: '#ffffff', fontSize:"1.2rem" }
 }
 const Menu = withRouter(({ history }) => (
-  <AppBar position="static" style={{height:"5rem"}}>
+  <AppBar position="fixed">
     <Toolbar>
-     
       <div>
         <Link style={{ textDecoration: 'none' }} to="/">
           <IconButton aria-label="Home" style={isActive(history, "/")}>
@@ -42,7 +42,6 @@ const Menu = withRouter(({ history }) => (
           <Button style={isActive(history, "/shops/all")}>All Shops</Button>
         </Link>
       </div>
-
       <Typography style={logoStyle} type="title"  variant="h1" component="h1">
        eBazaar
       </Typography>

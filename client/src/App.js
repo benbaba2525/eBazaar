@@ -3,13 +3,13 @@ import MainRouter from './mainRouter'
 import { BrowserRouter } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme} from 'material-ui/styles'
 import { blueGrey, lightGreen } from 'material-ui/colors'
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 
 
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     primary: {
       light: '#8eacbb',
       main: '#00acff',
@@ -25,12 +25,15 @@ const theme = createMuiTheme({
     openTitle: blueGrey['400'],
     protectedTitle: lightGreen['400'],
     type: 'light',
+    fontFamily: "Lobster",
+    fontStyle: "oblique"
   },
   
 })
 
 const App = () => (
   <BrowserRouter>
+   <CssBaseline />
     <MuiThemeProvider theme={theme}>
       <MainRouter />
     </MuiThemeProvider>
