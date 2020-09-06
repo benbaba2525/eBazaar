@@ -8,29 +8,35 @@ import Button from 'material-ui/Button'
 import auth from './../auth/auth-helper'
 import { Link, withRouter } from 'react-router-dom'
 
+const logoStyle = ({
+    fontSize: "3.5rem",
+    fontStyle: "oblique",
+    color: "black",
+});
+
 
 const isActive = (history, path) => {
   if (history.location.pathname === path)
-    return { color: '#bef67a' }
+    return { color: '#bef67a', fontSize:"1.2rem"}
   else
-    return { color: '#ffffff' }
+    return { color: '#ffffff',fontSize:"1.2rem"}
 }
 const isPartActive = (history, path) => {
   if (history.location.pathname.includes(path))
-    return { color: '#bef67a' }
+    return { color: '#bef67a', fontSize:"1.2rem" }
   else
-    return { color: '#ffffff' }
+    return { color: '#ffffff', fontSize:"1.2rem" }
 }
 const Menu = withRouter(({ history }) => (
   <AppBar position="static">
     <Toolbar>
-      <Typography type="title" color="inherit" variant="h1" component="h1">
+      <Typography style={logoStyle} type="title"  variant="h1" component="h1">
        eBazaar
       </Typography>
       <div>
         <Link style={{ textDecoration: 'none' }} to="/">
           <IconButton aria-label="Home" style={isActive(history, "/")}>
-            <HomeIcon />
+            <HomeIcon style={{ fontSize: 40}}  color="secondary"  />
           </IconButton>
         </Link>
         <Link style={{ textDecoration: 'none' }} to="/shops/all">
@@ -45,7 +51,7 @@ const Menu = withRouter(({ history }) => (
             </Button>
             </Link>
             <Link style={{ textDecoration: 'none' }} to="/signin">
-              <Button style={isActive(history, "/signin")}>Sign In
+              <Button style={isActive(history, "/signin")} >Sign In
             </Button>
             </Link>
           </span>)

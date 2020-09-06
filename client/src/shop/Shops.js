@@ -9,9 +9,13 @@ import Divider from 'material-ui/Divider'
 import { list } from './api-shop.js'
 import { Link } from 'react-router-dom'
 
+
+
+
+
 const styles = theme => ({
   root: theme.mixins.gutters({
-    maxWidth: 600,
+    maxWidth: 800,
     margin: 'auto',
     padding: theme.spacing.unit * 3,
     marginTop: theme.spacing.unit * 5,
@@ -31,7 +35,7 @@ const styles = theme => ({
     color: theme.palette.text.secondary
   },
   shopTitle: {
-    fontSize: '1.2em',
+    fontSize: '1.5em',
     marginBottom: '5px'
   },
   details: {

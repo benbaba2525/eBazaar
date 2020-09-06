@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import { read, listRelated } from './api-product.js'
 import { Link } from 'react-router-dom'
-import Suggestions from './../product/Suggestions'
+//import Suggestions from './../product/Suggestions'
 
 
 const styles = theme => ({
