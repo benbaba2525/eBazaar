@@ -21,6 +21,7 @@ const styles = theme => ({
     flexWrap: 'nowrap',
     width: '100%',
     transform: 'translateZ(0)',
+    backgroundColor: '#e1f5fe'
   },
   tileTitle: {
     verticalAlign: 'middle',
@@ -35,9 +36,11 @@ const styles = theme => ({
   },
   title: {
     padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
-    color: theme.palette.openTitle,
-    backgroundColor: '#80808024',
-    fontSize: '1.1em'
+    color: 'black',
+    fontFamily: "Luckiest Guy",
+    backgroundColor: '#81d4fa',
+    fontSize: '1.8em',
+    textAlign: 'center'
   },
   icon: {
     verticalAlign: 'sub',

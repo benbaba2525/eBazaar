@@ -15,7 +15,7 @@ const styles = theme => ({
     margin: 'auto',
     textAlign: 'center',
     paddingTop: 10,
-    backgroundColor: '#80808024'
+    backgroundColor: '#e1f5fe'
   },
   menu: {
     width: 200,
@@ -30,11 +30,11 @@ const styles = theme => ({
   searchField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 300,
+    width: 400,
     marginBottom: '20px'
   },
   searchButton: {
-    minWidth: '20px',
+    minWidth: '25px',
     height: '30px',
     padding: '0 8px'
   }
