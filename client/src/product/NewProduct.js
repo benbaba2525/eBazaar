@@ -53,6 +53,7 @@ class NewProduct extends Component {
       category: '',
       quantity: '',
       price: '',
+      contact: '',
       redirect: false,
       error: ''
     }
@@ -116,6 +117,16 @@ class NewProduct extends Component {
           <TextField id="category" label="Category" className={classes.textField} value={this.state.category} onChange={this.handleChange('category')} margin="normal" /><br />
           <TextField id="quantity" label="Quantity" className={classes.textField} value={this.state.quantity} onChange={this.handleChange('quantity')} type="number" margin="normal" /><br />
           <TextField id="price" label="Price" className={classes.textField} value={this.state.price} onChange={this.handleChange('price')} type="number" margin="normal" /><br />
+          {/* <TextField
+            id="multiline-flexible"
+            label="Contact"
+            multiline
+            rows="2"
+            value={this.state.contact}
+            onChange={this.handleChange('contact')}
+            className={classes.textField}
+            margin="normal"
+          /><br /> */}
           {
             this.state.error && (<Typography component="p" color="error">
               <Icon color="error" className={classes.error}>error</Icon>

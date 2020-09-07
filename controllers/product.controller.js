@@ -1,5 +1,6 @@
 const Product = require('../models/product.model')
-const _ = require('../helpers/dbErrorHandler')
+const errorHandler = require('../helpers/dbErrorHandler')
+const _ = require('lodash')
 const formidable = require('formidable')
 const fs = require('fs')
 
@@ -63,7 +64,7 @@ const update = (req, res, next) => {
       })
     }
     let product = req.product
-    //product = _.extend(product, fields)
+    product = _.extend(product, fields)
     product.updated = Date.now()
     if (files.image) {
       product.image.data = fs.readFileSync(files.image.path)

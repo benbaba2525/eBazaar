@@ -26,6 +26,10 @@ const ProductSchema = new mongoose.Schema({
     type: Number,
     required: "Price is required"
   },
+  contact: {
+    type: String,
+    trim: true
+  },
   updated: Date,
   created: {
     type: Date,
