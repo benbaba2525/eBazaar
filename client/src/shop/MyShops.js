@@ -25,7 +25,7 @@ const styles = theme => ({
   title: {
     margin: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 3}px ${theme.spacing.unit}px`,
     color: theme.palette.protectedTitle,
-    fontSize: '1.2em'
+    fontSize: '30px'
   },
   addButton: {
     float: 'right'

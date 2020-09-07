@@ -21,7 +21,7 @@ const styles = theme => ({
   title: {
     margin: theme.spacing.unit * 2,
     color: theme.palette.protectedTitle,
-    fontSize: '1.2em'
+    fontSize: '30px'
   },
   subheading: {
     marginTop: theme.spacing.unit,

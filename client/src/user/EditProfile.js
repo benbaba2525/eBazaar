@@ -22,7 +22,8 @@ const styles = theme => ({
   },
   title: {
     margin: theme.spacing.unit * 2,
-    color: theme.palette.protectedTitle
+    color: theme.palette.protectedTitle,
+    fontSize: '30px'
   },
   error: {
     verticalAlign: 'middle'

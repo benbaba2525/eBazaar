@@ -24,7 +24,7 @@ const styles = theme => ({
   title: {
     marginTop: theme.spacing.unit * 2,
     color: theme.palette.openTitle,
-    fontSize: '1em'
+    fontSize: '30px'
   },
   textField: {
     marginLeft: theme.spacing.unit,

@@ -25,7 +25,7 @@ const styles = theme => ({
     margin: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 2}px`,
     color: theme.palette.protectedTitle,
     textAlign: 'center',
-    fontSize: '1.2em'
+    fontSize: '30px'
   },
   avatar: {
     width: 100,
@@ -35,7 +35,7 @@ const styles = theme => ({
     color: theme.palette.text.secondary
   },
   shopTitle: {
-    fontSize: '1.5em',
+    fontSize: '20px',
     marginBottom: '5px'
   },
   details: {

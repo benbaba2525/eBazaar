@@ -18,7 +18,8 @@ const styles = theme => ({
   }),
   title: {
     margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`,
-    color: theme.palette.openTitle
+    color: theme.palette.openTitle,
+    fontSize: '30px'
   }
 })
 

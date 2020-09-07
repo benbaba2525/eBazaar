@@ -25,7 +25,8 @@ const styles = theme => ({
   }),
   title: {
     margin: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 2}px`,
-    color: theme.palette.protectedTitle
+    color: theme.palette.protectedTitle,
+    fontSize: '30px'
   },
   stripe_connect: {
     marginRight: '10px',
