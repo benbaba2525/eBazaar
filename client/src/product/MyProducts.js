@@ -15,7 +15,7 @@ import DeleteProduct from './../product/DeleteProduct'
 
 const styles = theme => ({
   products: {
-    padding: '24px'
+    padding: '24px',
   },
   addButton: {
     float: 'right'

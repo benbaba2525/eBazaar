@@ -5,7 +5,7 @@ import Icon from 'material-ui/Icon'
 import Grid from 'material-ui/Grid'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import { read, listRelated } from './api-product.js'
+import { read } from './api-product.js'
 import { Link } from 'react-router-dom'
 //import Suggestions from './../product/Suggestions'
 
@@ -13,16 +13,19 @@ import { Link } from 'react-router-dom'
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: 30,
+    margin: 30
   },
   flex: {
-    display: 'flex'
+    display: 'flex',
+    textAlign: 'center',
   },
   card: {
-    padding: '24px 40px 40px'
+    padding: '24px 40px 40px',
+   
   },
   subheading: {
-    margin: '24px',
+    margin: 'auto',
+    fontSize: '18px',
     color: theme.palette.openTitle
   },
   price: {
@@ -30,28 +33,25 @@ const styles = theme => ({
     margin: '16px 0px',
     display: 'flex',
     backgroundColor: '#93c5ae3d',
-    fontSize: '1.3em',
+    fontSize: '20px',
     color: '#375a53',
   },
   media: {
-    height: 200,
+    height: 400,
     display: 'inline-block',
-    width: '50%',
-    marginLeft: '24px'
+    width: '40%',
+    margin: 'auto',    
   },
   icon: {
-    verticalAlign: 'sub'
+    verticalAlign: 'sub',
+    margin: '20px',
+    color: '#34515e',
   },
   link: {
     color: '#3e4c54b3',
-    fontSize: '0.9em'
-  },
-  addCart: {
-    width: '35px',
-    height: '35px',
-    padding: '10px 12px',
-    borderRadius: '0.25em',
-    backgroundColor: '#5f7c8b'
+    fontSize: '20px',
+    margin: '10px'
+  
   },
   action: {
     margin: '8px 24px',
@@ -64,32 +64,24 @@ class Product extends Component {
     super()
     this.state = {
       product: { shop: {} },
-      suggestions: [],
-      suggestionTitle: 'Related Products'
     }
     this.match = match
   }
+
   loadProduct = (productId) => {
     read({ productId: productId }).then((data) => {
       if (data.error) {
         this.setState({ error: data.error })
       } else {
         this.setState({ product: data })
-        listRelated({
-          productId: data._id
-        }).then((data) => {
-          if (data.error) {
-            console.log(data.error)
-          } else {
-            this.setState({ suggestions: data })
-          }
-        })
       }
     })
   }
+
   componentDidMount = () => {
     this.loadProduct(this.match.params.productId)
   }
+
   componentWillReceiveProps = (props) => {
     this.loadProduct(props.match.params.productId)
   }
@@ -102,7 +94,7 @@ class Product extends Component {
     return (
       <div className={classes.root}>
         <Grid container spacing={40}>
-          <Grid item xs={7} sm={7}>
+          <Grid item xs={12} sm={12}>
             <Card className={classes.card}>
               <div className={classes.flex}>
                 <CardMedia
@@ -111,22 +103,22 @@ class Product extends Component {
                   title={this.state.product.name}
                 />
                 <Typography component="p" type="subheading" className={classes.subheading}>
-                  {this.state.product.description}<br />
+                  {this.state.product.description}<hr />
                   <span className={classes.price}>$ {this.state.product.price}</span>
+                  <hr />
                   <Link style={{ textDecoration: 'none' }} to={'/shops/' + this.state.product.shop._id} className={classes.link}>
                     <span>
-                      <Icon className={classes.icon}>shopping_basket</Icon> {this.state.product.shop.name}
+                    <Icon className={classes.icon}>shopping_basket</Icon>  
+                    <Typography style={{fontSize:'20px'}}> Seller Shop  </Typography > {this.state.product.shop.name}
                     </span>
                   </Link>
+                  <hr />
+                  <Icon className={classes.icon}>contacts</Icon> <Typography style={{fontSize:'20px'}}> Contact Me </Typography>
+                  {this.state.product.contact}<br />
                 </Typography>
-
               </div>
             </Card>
           </Grid>
-          {/* {this.state.suggestions.length > 0 &&
-            (<Grid item xs={5} sm={5}>
-              <Suggestions products={this.state.suggestions} title='Related Products' />
-            </Grid>)} */}
         </Grid>
       </div>)
   }
