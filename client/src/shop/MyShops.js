@@ -90,7 +90,7 @@ class MyShops extends Component {
                   <ListItemAvatar>
                     <Avatar src={logoUrl} />
                   </ListItemAvatar>
-                  <ListItemText primary={shop.name} secondary={shop.description} />
+                  <ListItemText style={{fontSize:'20px'}}primary={shop.name} secondary={shop.description} />
                   {auth.isAuthenticated().user && auth.isAuthenticated().user._id === shop.owner._id &&
                     (<ListItemSecondaryAction>
                       <Link to={"/seller/shop/edit/" + shop._id}>
