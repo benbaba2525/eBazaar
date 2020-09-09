@@ -21,7 +21,7 @@ const styles = theme => ({
     flexWrap: 'nowrap',
     width: '100%',
     transform: 'translateZ(0)',
-    backgroundColor: '#e1f5fe'
+    backgroundColor: '#e1f5fe' 
   },
   tileTitle: {
     verticalAlign: 'middle',
@@ -38,17 +38,16 @@ const styles = theme => ({
     padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
     color: 'black',
     fontFamily: "Luckiest Guy",
-    backgroundColor: '#81d4fa',
     fontSize: '1.8em',
+    backgroundColor: '#eceff1', 
     textAlign: 'center'
   },
   icon: {
     verticalAlign: 'sub',
-    color: '#738272',
-    fontSize: '0.9em'
+    color: '#080807', 
   },
   link: {
-    color: '#4d6538',
+    color: '#4d6538', 
     textShadow: '0px 2px 12px #ffffff',
     cursor: 'pointer'
   }
@@ -96,7 +95,7 @@ class Categories extends Component {
           <div className={classes.root}>
             <GridList className={classes.gridList} cols={4}>
               {this.props.categories.map((tile, i) => (
-                <GridListTile key={i} className={classes.tileTitle} style={{ height: '50px',width:'20%',backgroundColor: this.state.selected === tile ? '#f06292' : '#b2ebf2' }}>
+                <GridListTile key={i} className={classes.tileTitle} style={{ height: '50px',backgroundColor: this.state.selected === tile ? '#e1f5fe' : '#607d8b' }}>
                   <span className={classes.link} onClick={this.listbyCategory(tile)}>{tile}  <Icon className={classes.icon}>{this.state.selected === tile && 'arrow_drop_down'}</Icon></span>
                 </GridListTile>
               ))}
