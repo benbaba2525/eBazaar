@@ -9,25 +9,26 @@ import auth from './../auth/auth-helper'
 import { Link, withRouter } from 'react-router-dom'
 
 const logoStyle = ({
-    fontSize: "3.8rem",
-    fontFamily: "Lobster",
-    fontStyle: "oblique",
-    color: "black",
-    margin: "auto"
-});
+     fontSize: "3.8rem",
+     fontFamily: "Lobster",
+     fontStyle: "oblique",
+     color: "white",
+     margin: "auto"
+ })
+
 
 //oblique
 const isActive = (history, path) => {
   if (history.location.pathname === path)
-    return { color: '#bef67a', fontSize:"1.2rem"}
+    return { color: '#fff', fontSize:"1.0rem"}
   else
-    return { color: '#ffffff',fontSize:"1.2rem"}
+    return { color: '#ffffff',fontSize:"1.0rem"}
 }
 const isPartActive = (history, path) => {
   if (history.location.pathname.includes(path))
-    return { color: '#bef67a', fontSize:"1.2rem" }
+    return { color: '#fff', fontSize:"1.0rem" }
   else
-    return { color: '#ffffff', fontSize:"1.2rem" }
+    return { color: '#ffffff', fontSize:"1.0rem" }
 }
 const Menu = withRouter(({ history }) => (
   <AppBar position="static">
@@ -35,7 +36,7 @@ const Menu = withRouter(({ history }) => (
       <div>
         <Link style={{ textDecoration: 'none' }} to="/">
           <IconButton aria-label="Home" style={isActive(history, "/")}>
-            <HomeIcon style={{ fontSize: 40}}  color="secondary"  />
+            <HomeIcon style={{ fontSize: 40}}  color="white"  />
           </IconButton>
         </Link>
         <Link style={{ textDecoration: 'none' }} to="/shops/all">

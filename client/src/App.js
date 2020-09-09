@@ -6,20 +6,19 @@ import { blue, lightBlue } from 'material-ui/colors'
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 
-
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#8eacbb',
-      main: '#00acff',
-      dark: '#34515e',
+      light: '#4f83cc',
+      main: '#01579b',
+      dark: '#002f6c',
       contrastText: '#fff',
     },
     secondary: {
-      light: '#e7ff8c',
-      main: '#f50057',
-      dark: '#7ecb20',
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
       contrastText: '#000',
     },
     openTitle: blue['400'],

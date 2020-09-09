@@ -64,20 +64,6 @@ const remove = (params, credentials) => {
   })
 }
 
-const stripeUpdate = (params, credentials, auth_code) => {
-  return fetch('/api/stripe_auth/' + params.userId, {
-    method: 'PUT',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + credentials.t
-    },
-    body: JSON.stringify({ stripe: auth_code })
-  }).then((response) => {
-    return response.json()
-  }).catch((err) => {
-    console.log(err)
-  })
-}
 
-export { create, list, read, update, remove, stripeUpdate }
+
+export { create, list, read, update, remove }

@@ -1,12 +1,13 @@
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Grid from 'material-ui/Grid'
-import Box from '@material-ui/core/Box'
-//import Suggestions from './../product/Suggestions'
+import Box from '@material-ui/core/Box';
 import { listLatest, listCategories } from './../product/api-product.js'
 import Search from './../product/Search'
 import Categories from './../product/Categories'
+
 
 
 const styles = theme => ({
@@ -15,9 +16,8 @@ const styles = theme => ({
     margin: 30,
   },
   img:{
-    backgroundImage: `url("https://cdn5.f-cdn.com/contestentries/115107/9975551/54405df8375b6_thumb900.jpg")`,
+    backgroundImage: `url("https://d3h0owdjgzys62.cloudfront.net/images/tag_images/8/large/Ecommerce_business_background.jpg")`,
     height: "400px",
-    //backgroundColor: "#00acff"
   }
 })
 
@@ -55,9 +55,6 @@ class Home extends Component {
             <Search categories={this.state.categories} />
             <Categories categories={this.state.categories} />
           </Grid>
-          {/* <Grid item xs={4} sm={4}>
-            <Suggestions products={this.state.suggestions} title={this.state.suggestionTitle} />
-          </Grid> */}
         </Grid>
       </div>
     )
