@@ -27,13 +27,6 @@ const styles = theme => ({
     color: theme.palette.protectedTitle,
     fontSize: '30px'
   },
-  stripe_connect: {
-    marginRight: '10px',
-  },
-  stripe_connected: {
-    verticalAlign: 'super',
-    marginRight: '10px'
-  }
 })
 
 class Profile extends Component {
@@ -81,7 +74,7 @@ class Profile extends Component {
                 <Person />
               </Avatar>
             </ListItemAvatar>
-            <ListItemText primary={this.state.user.name} secondary={this.state.user.email} /> {
+            <ListItemText style={{fontSize:'20px'}} primary={this.state.user.name} secondary={this.state.user.email} /> {
               auth.isAuthenticated().user && auth.isAuthenticated().user._id === this.state.user._id &&
               (<ListItemSecondaryAction>
                 <Link to={"/user/edit/" + this.state.user._id}>
@@ -95,7 +88,7 @@ class Profile extends Component {
           </ListItem>
           <Divider />
           <ListItem>
-            <ListItemText primary={"Joined: " + (
+            <ListItemText style={{fontSize:'15px'}} primary={"Joined: " + (
               new Date(this.state.user.created)).toDateString()} />
           </ListItem>
         </List>

@@ -37,8 +37,8 @@ const styles = theme => ({
     fontSize: '30px'
   },
   avatar: {
-    width: 180,
-    height: 180
+    width: 150,
+    height: 150
   },
   subheading: {
     color: theme.palette.text.secondary

@@ -10,10 +10,10 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden',
+    overflow: 'auto',
     background: theme.palette.background.paper,
     textAlign: 'left',
-    padding: '0 8px'
+    padding: '0 8px',
   },
   container: {
     minWidth: '100%',
@@ -21,8 +21,9 @@ const styles = theme => ({
   },
   gridList: {
     width: '100%',
-    minHeight: 200,
-    padding: '16px 0 10px'
+    minHeight: 450,
+    padding: '36px 30px 30px',
+   
   },
   title: {
     padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
@@ -33,17 +34,19 @@ const styles = theme => ({
     textAlign: 'center'
   },
   image: {
-    height: '100%'
+    height: '100%',
+    padding: '30px',
+    margin: '25px',
   },
   tileBar: {
     backgroundColor: 'rgba(0, 0, 0, 0.72)',
-    textAlign: 'left'
+    textAlign: 'left',
   },
   tileTitle: {
     fontSize: '1.1em',
     marginBottom: '5px',
     color: 'rgb(189, 222, 219)',
-    display: 'block'
+    display: 'block',
   }
 })
 class Products extends Component {
@@ -53,7 +56,7 @@ class Products extends Component {
       <div className={classes.root}>
         {this.props.products.length > 0 ?
           (<div className={classes.container}>
-            <GridList cellHeight={200} className={classes.gridList} cols={3}>
+            <GridList cellHeight={250} className={classes.gridList} cols={3}>
               {this.props.products.map((product, i) => (
                 <GridListTile key={i} className={classes.tile}>
                   <Link style={{ textDecoration: 'none' }} to={"/product/" + product._id}><img className={classes.image} src={'/api/product/image/' + product._id} alt={product.name} /></Link>

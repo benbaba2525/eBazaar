@@ -38,7 +38,7 @@ const styles = theme => ({
     padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
     color: 'black',
     fontFamily: "Luckiest Guy",
-    fontSize: '1.8em',
+    fontSize: '1.6em',
     backgroundColor: '#eceff1', 
     textAlign: 'center'
   },
@@ -47,7 +47,7 @@ const styles = theme => ({
     color: '#080807', 
   },
   link: {
-    color: '#4d6538', 
+    color: 'black', 
     textShadow: '0px 2px 12px #ffffff',
     cursor: 'pointer'
   }
