@@ -9,6 +9,7 @@ import Divider from 'material-ui/Divider'
 import { list } from './api-shop.js'
 import { Link } from 'react-router-dom'
 
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -24,7 +25,7 @@ import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   root: theme.mixins.gutters({
-    maxWidth: 800,
+    maxWidth: 700,
     margin: 'auto',
     padding: theme.spacing.unit * 3,
     marginTop: theme.spacing.unit * 5,
@@ -36,9 +37,10 @@ const styles = theme => ({
     textAlign: 'center',
     fontSize: '30px'
   },
-  avatar: {
-    width: 150,
-    height: 150
+  img: {
+    width: 160,
+    height: 160,
+    padding: '10px'
   },
   subheading: {
     color: theme.palette.text.secondary
@@ -84,9 +86,9 @@ class Shops extends Component {
               return <Link style={{ textDecoration: 'none' }} to={"/shops/" + shop._id} key={i}>
                 <Divider />
                 <ListItem button>
-                  <ListItemAvatar>
-                    <Avatar className={classes.avatar} src={'/api/shops/logo/' + shop._id + "?" + new Date().getTime()} />
-                  </ListItemAvatar>
+                 <ButtonBase className={classes.image}>
+                   <img className={classes.img} alt="complex" src={'/api/shops/logo/' + shop._id + "?" + new Date().getTime()} />
+                 </ButtonBase>
                   <div className={classes.details}>
                     <Typography type="headline" component="h2" color="primary" className={classes.shopTitle}>
                       {shop.name}
@@ -101,67 +103,6 @@ class Shops extends Component {
             })}
           </List>
         </Paper>
-
-
-        {/* <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image=""
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card> */}
-
-
-    {/* <Card className={classes.root}>
-        <Typography type="title" className={classes.title}>
-            All Shops
-        </Typography>
-        {this.state.shops.map((shop, i) => {
-              return <Link style={{ textDecoration: 'none' }} to={"/shops/" + shop._id} key={i}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image={'/api/shops/logo/' + shop._id + "?" + new Date().getTime()}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-          {shop.name}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-          {shop.description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    })}
-    </Card>
-
-
- */}
-
 
       </div>)
   }

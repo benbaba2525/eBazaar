@@ -87,10 +87,10 @@ class MyShops extends Component {
             {this.state.shops.map((shop, i) => {
               return <span key={i}>
                 <ListItem button>
-                  <ListItemAvatar>
-                    <Avatar src={logoUrl} />
-                  </ListItemAvatar>
-                  <ListItemText style={{fontSize:'20px'}}primary={shop.name} secondary={shop.description} />
+                <ListItemAvatar>
+                  <Avatar style={{width:'60px', height:'60px'}} src={'/api/shops/logo/'+shop._id+"?" + new Date().getTime()}/>
+                </ListItemAvatar>
+                  <ListItemText style={{fontSize:'20px'}} primary={shop.name} secondary={shop.description} />
                   {auth.isAuthenticated().user && auth.isAuthenticated().user._id === shop.owner._id &&
                     (<ListItemSecondaryAction>
                       <Link to={"/seller/shop/edit/" + shop._id}>
