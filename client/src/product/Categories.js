@@ -39,7 +39,7 @@ const styles = theme => ({
     color: 'black',
     fontFamily: "Luckiest Guy",
     fontSize: '1.6em',
-    backgroundColor: '#eceff1', 
+    backgroundColor: '#cfd8dc', 
     textAlign: 'center'
   },
   icon: {
