@@ -1,12 +1,10 @@
 {
-  "name": "mern-marketplace",
+  "name": "eBazaar - Market Place",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "keywords": [],
-  "author": "Kamil Smas",
   "license": "ISC",
-
   "scripts": {
     "watch": "npm-watch",
     "client-install": "npm install --prefix client",
@@ -36,13 +34,17 @@
     "nodemon": "1.17.3",
     "npm-watch": "^0.7.0",
     "query-string": "^6.7.0",
+    "react-elastic-carousel": "^0.7.5",
+    "react-responsive-carousel": "^3.2.9",
+    "react-slick": "^0.27.11",
     "react-stripe-elements": "^3.0.0",
     "request": "^2.88.0",
+    "slick-carousel": "^1.8.1",
     "stripe": "^7.1.0"
   },
-  "watch":{
+  "watch": {
     "build": {
-      "patterns":[
+      "patterns": [
         "src"
       ],
       "extensions": "js,jsx"
@@ -51,5 +53,4 @@
   "engines": {
     "node": "8.12.0"
   }
-  
 }
