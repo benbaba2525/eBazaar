@@ -20,15 +20,15 @@ const logoStyle = ({
 //oblique
 const isActive = (history, path) => {
   if (history.location.pathname === path)
-    return { color: '#fff', fontSize:"1.0rem"}
+    return { color: '#fff', fontSize:"1.2rem"}
   else
-    return { color: '#ffffff',fontSize:"1.0rem"}
+    return { color: '#ffffff',fontSize:"1.2rem"}
 }
 const isPartActive = (history, path) => {
   if (history.location.pathname.includes(path))
-    return { color: '#fff', fontSize:"1.0rem" }
+    return { color: '#fff', fontSize:"1.2rem" }
   else
-    return { color: '#ffffff', fontSize:"1.0rem" }
+    return { color: '#ffffff', fontSize:"1.2rem" }
 }
 const Menu = withRouter(({ history }) => (
   <AppBar position="static">
