@@ -14,9 +14,7 @@ const logoStyle = ({
      fontFamily: "Lobster",
      fontStyle: "oblique",
      color: "white",
-     margin: "auto"
- 
-    
+     margin: "auto"   
  });
 
 

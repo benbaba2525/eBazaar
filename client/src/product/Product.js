@@ -19,8 +19,7 @@ const styles = theme => ({
     textAlign: 'center',
   },
   card: {
-    padding: '24px 40px 40px',
-   
+    padding: '24px 40px 40px', 
   },
   subheading: {
     margin: 'auto',
@@ -36,10 +35,10 @@ const styles = theme => ({
     color: '#375a53',
   },
   media: {
-    height: 400,
+    height: 450,
     display: 'inline-block',
     width: '40%',
-    margin: 'auto',    
+    margin: 'auto',  
   },
   icon: {
     verticalAlign: 'sub',
@@ -97,7 +96,7 @@ class Product extends Component {
             <Card className={classes.card}>
               <div className={classes.flex}>
                 <CardMedia
-                  className={classes.media}
+                  className={classes.media} 
                   image={imageUrl}
                   title={this.state.product.name}
                 />

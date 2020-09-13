@@ -37,6 +37,7 @@ const styles = theme => ({
   },
   image: {
     height: '100%',
+    width: '100%',
     padding: '30px',
     margin: '25px',
   },
