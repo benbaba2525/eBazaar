@@ -14,7 +14,8 @@ const logoStyle = ({
      fontFamily: "Lobster",
      fontStyle: "oblique",
      color: "white",
-     margin: "auto"
+     margin: "auto",
+    
  });
 
 
@@ -44,10 +45,14 @@ const Menu = withRouter(({ history }) => (
           <Button style={isActive(history, "/shops/all")}>All Shops</Button>
         </Link>
       </div>
+
       <Typography style={logoStyle} type="title"  variant="h1" component="h1">
        eBazaar
       </Typography>
-      <div style={{ 'position': 'absolute', 'right': '10px' }}><span style={{ 'float': 'right' }}>
+
+
+      
+      <div style={{ 'right': '10px' }}><span style={{ 'float': 'right' }}>
         {
           !auth.isAuthenticated() && (<span>
             <Link style={{ textDecoration: 'none' }} to="/signup">
