@@ -27,7 +27,9 @@ const styles = theme => ({
   },
   title: {
     padding: `${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
-    color: theme.palette.openTitle,
+    color: 'red',
+    textAlign: 'center',
+    fontSize: '20px',
     width: '100%'
   },
   tile: {
@@ -48,6 +50,7 @@ const styles = theme => ({
     color: 'rgb(189, 222, 219)',
     display: 'block',
   }
+  
 })
 class Products extends Component {
   render() {
@@ -66,7 +69,7 @@ class Products extends Component {
                   />
                 </GridListTile>
               ))}
-            </GridList></div>) : this.props.searched && (<Typography type="subheading" component="h4" className={classes.title}>No products found! :(</Typography>)}
+            </GridList></div>) : this.props.searched && (<Typography type="subheading" component="h1" className={classes.title}>No products found! :(</Typography>)}
       </div>)
   }
 }

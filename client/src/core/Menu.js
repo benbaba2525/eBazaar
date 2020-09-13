@@ -14,7 +14,8 @@ const logoStyle = ({
      fontFamily: "Lobster",
      fontStyle: "oblique",
      color: "white",
-     margin: "auto",
+     margin: "auto"
+ 
     
  });
 
@@ -50,8 +51,6 @@ const Menu = withRouter(({ history }) => (
        eBazaar
       </Typography>
 
-
-      
       <div style={{ 'right': '10px' }}><span style={{ 'float': 'right' }}>
         {
           !auth.isAuthenticated() && (<span>
