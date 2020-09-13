@@ -7,7 +7,7 @@ import HomeIcon from 'material-ui-icons/Home'
 import Button from 'material-ui/Button'
 import auth from './../auth/auth-helper'
 import { Link, withRouter } from 'react-router-dom'
-import { withStyles } from 'material-ui/styles'
+
 
 const logoStyle = ({
      fontSize: "3.8rem",
@@ -32,7 +32,7 @@ const isPartActive = (history, path) => {
     return { color: '#ffffff', fontSize:"1.2rem" }
 }
 const Menu = withRouter(({ history }) => (
-  <AppBar position="static">
+  <AppBar position="sticky">
     <Toolbar>
       <div>
         <Link style={{ textDecoration: 'none' }} to="/">
