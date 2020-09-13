@@ -1,35 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc71da4ae4f7d4d675d184e2593f8f55",
+    "revision": "a48618629a4430edc23e03e7ffb991e8",
     "url": "/index.html"
   },
   {
-    "revision": "088b07de471d6cbd7198",
+    "revision": "452ecbf29ccea9a88aef",
     "url": "/static/css/2.18585a14.chunk.css"
   },
   {
-    "revision": "088b07de471d6cbd7198",
-    "url": "/static/js/2.ac7730a8.chunk.js"
+    "revision": "452ecbf29ccea9a88aef",
+    "url": "/static/js/2.b76e290d.chunk.js"
   },
   {
-    "revision": "3cd4d9a7daa2b0c09f8b",
-    "url": "/static/js/main.f30eaad0.chunk.js"
+    "revision": "dfe2a6bba43724c1c264",
+    "url": "/static/js/main.9e117370.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "4222960e348360bbbe4bed48f9e092bc",
-    "url": "/static/media/Ecommerce_business_background.4222960e.jpg"
-  },
-  {
     "revision": "90c73ae99a0638147accaa591e0dbb5f",
-    "url": "/static/media/Header-Image.90c73ae9.jpg"
+    "url": "/static/media/img1.90c73ae9.jpg"
   },
   {
-    "revision": "0c329f75f1f5f35b724d67a093c3ebe8",
-    "url": "/static/media/shopping.0c329f75.jpeg"
+    "revision": "6181f6ce3993c4ef5ee03b1e6e7b772e",
+    "url": "/static/media/img2.6181f6ce.jpg"
+  },
+  {
+    "revision": "4a0b65c9ab98def585cb8eb70be98b77",
+    "url": "/static/media/img3.4a0b65c9.png"
+  },
+  {
+    "revision": "4222960e348360bbbe4bed48f9e092bc",
+    "url": "/static/media/img4.4222960e.jpg"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
