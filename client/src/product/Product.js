@@ -12,14 +12,11 @@ import { Link } from 'react-router-dom'
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: 30
-  },
-  flex: {
-    display: 'flex',
-    textAlign: 'center',
+    margin: 30,
   },
   card: {
     padding: '24px 40px 40px', 
+    textAlign: 'center'
   },
   subheading: {
     margin: 'auto',
@@ -37,7 +34,7 @@ const styles = theme => ({
   media: {
     height: 450,
     display: 'inline-block',
-    width: '40%',
+    width: '100%',
     margin: 'auto',  
   },
   icon: {
@@ -54,7 +51,7 @@ const styles = theme => ({
   action: {
     margin: '8px 24px',
     display: 'inline-block'
-  }
+  },
 })
 
 class Product extends Component {
@@ -90,16 +87,19 @@ class Product extends Component {
       : '/api/product/defaultphoto'
     const { classes } = this.props
     return (
-      <div className={classes.root}>
-        <Grid container spacing={40}>
-          <Grid item xs={12} sm={12}>
+    <div className={classes.root}>
+      <Grid container spacing={40}>
+          <Grid item lg={7} xs={12} sm={12}>
             <Card className={classes.card}>
-              <div className={classes.flex}>
                 <CardMedia
                   className={classes.media} 
                   image={imageUrl}
                   title={this.state.product.name}
                 />
+            </Card>
+          </Grid>
+        <Grid item lg={5} xs={12} sm={12}>
+        <Card className={classes.card}>
                 <Typography component="p" type="subheading" className={classes.subheading}>
                   {this.state.product.description}<hr />
                   <span className={classes.price}>$ {this.state.product.price}</span>
@@ -113,13 +113,11 @@ class Product extends Component {
                   <hr />
                   <Icon className={classes.icon}>contacts</Icon> <Typography style={{fontSize:'20px'}}> Contact Me </Typography>
                   {this.state.product.contact}<br />
-                  
                 </Typography>
-              </div>
-            </Card>
-          </Grid>
+        </Card>
         </Grid>
-      </div>)
+      </Grid>
+    </div>)
   }
 }
 
