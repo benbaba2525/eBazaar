@@ -61,7 +61,7 @@ class Products extends Component {
       <div className={classes.root}>
         {this.props.products.length > 0 ?
           (<div className={classes.container}>
-            <GridList cellHeight={250} className={classes.gridList} cols={3}>
+            <GridList cellHeight={250} className={classes.gridList} cols={2}>
               {this.props.products.map((product, i) => (
                 <GridListTile key={i} className={classes.tile}>
                   <Link style={{ textDecoration: 'none' }} to={"/product/" + product._id}><img className={classes.image} src={'/api/product/image/' + product._id} alt={product.name} /></Link>
