@@ -12,7 +12,7 @@ import { create } from './api-product.js'
 import { Link, Redirect } from 'react-router-dom'
 const styles = theme => ({
   card: {
-    maxWidth: 600,
+    maxWidth: 490,
     margin: 'auto',
     textAlign: 'center',
     marginTop: theme.spacing.unit * 5,

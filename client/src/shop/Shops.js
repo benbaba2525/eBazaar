@@ -2,30 +2,17 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Paper from 'material-ui/Paper'
-import List, { ListItem, ListItemAvatar } from 'material-ui/List'
-import Avatar from 'material-ui/Avatar'
+import List, { ListItem} from 'material-ui/List'
 import Typography from 'material-ui/Typography'
 import Divider from 'material-ui/Divider'
 import { list } from './api-shop.js'
 import { Link } from 'react-router-dom'
-
 import ButtonBase from '@material-ui/core/ButtonBase';
-
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-
-
-
-
 
 
 const styles = theme => ({
   root: theme.mixins.gutters({
-    maxWidth: 700,
+    maxWidth: 600,
     margin: 'auto',
     padding: theme.spacing.unit * 3,
     marginTop: theme.spacing.unit * 5,

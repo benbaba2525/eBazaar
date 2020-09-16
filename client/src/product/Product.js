@@ -89,7 +89,7 @@ class Product extends Component {
     return (
     <div className={classes.root}>
       <Grid container spacing={40}>
-          <Grid item lg={7} xs={12} sm={12}>
+          <Grid item lg={7} md={7} xs={12} sm={12}>
             <Card className={classes.card}>
                 <CardMedia
                   className={classes.media} 
@@ -98,7 +98,7 @@ class Product extends Component {
                 />
             </Card>
           </Grid>
-        <Grid item lg={5} xs={12} sm={12}>
+        <Grid item lg={5} md={5} xs={12} sm={12}>
         <Card className={classes.card}>
                 <Typography component="p" type="subheading" className={classes.subheading}>
                   {this.state.product.description}<hr />

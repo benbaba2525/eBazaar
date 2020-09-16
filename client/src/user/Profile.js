@@ -17,7 +17,7 @@ import { Redirect, Link } from 'react-router-dom'
 
 const styles = theme => ({
   root: theme.mixins.gutters({
-    maxWidth: 600,
+    maxWidth: 490,
     margin: 'auto',
     padding: theme.spacing.unit * 3,
     marginTop: theme.spacing.unit * 5

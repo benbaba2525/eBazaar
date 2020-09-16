@@ -5,6 +5,7 @@ import Typography from 'material-ui/Typography'
 import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList'
 import { Link } from 'react-router-dom'
 
+
 const styles = theme => ({
   root: {
     display: 'flex',

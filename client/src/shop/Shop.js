@@ -82,7 +82,7 @@ class Shop extends Component {
     const { classes } = this.props
     return (<div className={classes.root}>
       <Grid container spacing={24}>
-        <Grid item xs={4} sm={4}>
+        <Grid item lg={4} md={4} xs={12} sm={12}>
           <Card className={classes.card}>
             <CardContent>
               <Typography type="headline" component="h2" className={classes.title}>
@@ -96,7 +96,7 @@ class Shop extends Component {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={8} sm={8}>
+        <Grid item lg={8} md={8}  sm={12} xs={12}>
           <Card>
             <Typography type="title" component="h2" className={classes.productTitle}>Products</Typography>
             <Products products={this.state.products} searched={false} />
