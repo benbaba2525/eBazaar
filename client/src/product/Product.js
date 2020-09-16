@@ -23,6 +23,11 @@ const styles = theme => ({
     padding: '24px 40px 40px', 
     textAlign: 'center'
   },
+  cardDetails: {
+    height: '100%',
+    padding: '24px 40px 40px', 
+    textAlign: 'center'
+  },
   subheading: {
     margin: 'auto',
     fontSize: '20px',
@@ -110,7 +115,7 @@ class Product extends Component {
           </Grid>
 
         <Grid item lg={5} md={5} xs={12} sm={12}>
-          <Card className={classes.card}>
+          <Card className={classes.cardDetails}>
                 <Typography component="p" type="subheading" className={classes.subheading}>
                   {this.state.product.description}<hr />
                   <span className={classes.price}>$ {this.state.product.price}</span>
@@ -122,7 +127,7 @@ class Product extends Component {
                     </span>
                   </Link>
                   <hr />
-                  <Icon className={classes.icon}>contacts</Icon> <Typography style={{fontSize:'20px'}}> Contact Me </Typography>
+                  <Icon className={classes.icon}>contacts</Icon> <Typography style={{fontSize:'20px', padding:'10px'}}> Contact Me </Typography>
                   {this.state.product.contact}<br />
                 </Typography>
           </Card>
